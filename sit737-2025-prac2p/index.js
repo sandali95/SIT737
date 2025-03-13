@@ -5,31 +5,25 @@ const winston = require("winston");
 
 const app = express();
 
+// Configure Winston Logger
 const logger = winston.createLogger({
-  level: "info",
+  level: "info", // Log level (info, warn, error, etc.)
   format: winston.format.json(),
-  defaultMeta: { service: "todo-service" },
   transports: [
-    new winston.transports.File({ filename: "logs/error.log", level: "error" }),
+    new winston.transports.Console(), // Logs to console
+    new winston.transports.File({ filename: "logs/error.log" }), // Logs to file
   ],
 });
-
-//
-// If we're not in production then log to the `console` with the format:
-// `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
-//
-if (process.env.NODE_ENV !== "production") {
-  logger.add(
-    new winston.transports.Console({
-      format: winston.format.simple(),
-    })
-  );
-}
 
 app.use(express.static(path.join(__dirname, "public")));
 const viewsPath = path.join(__dirname, "views");
 
-// Error Handling Middleware
+// Home Route
+app.get("/home", (req, res) => {
+  res.sendFile(path.join(viewsPath, "home.html"));
+});
+
+// Error Handling Middleware - for global errors
 app.use((err, req, res, next) => {
   logger.error(`500 - Server Error: ${err.message}`);
   res
@@ -37,6 +31,7 @@ app.use((err, req, res, next) => {
     .json({ error: "Internal Server Error", message: err.message });
 });
 
+//Error handling Middleware - for unknown routes
 app.use((req, res, next) => {
   logger.warn(`404 - Not Found: ${req.method} ${req.url}`);
   res
@@ -47,10 +42,7 @@ app.use((req, res, next) => {
     });
 });
 
-// Home Route
-app.get("/home", (req, res) => {
-  res.sendFile(path.join(viewsPath, "home.html"));
-});
+
 
 const port = 3040;
 app.listen(port, () => {
