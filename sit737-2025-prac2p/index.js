@@ -34,17 +34,13 @@ app.use((err, req, res, next) => {
 //Error handling Middleware - for unknown routes
 app.use((req, res, next) => {
   logger.warn(`404 - Not Found: ${req.method} ${req.url}`);
-  res
-    .status(404)
-    .json({
-      error: "Not Found",
-      message: "The requested resource does not exist.",
-    });
+  res.status(404).json({
+    error: "Not Found",
+    message: "The requested resource does not exist.",
+  });
 });
-
-
 
 const port = 3040;
 app.listen(port, () => {
-  console.log("hello i'm listening to port " + port);
+  console.log(`hello i'm listening to port ${port}`);
 });
