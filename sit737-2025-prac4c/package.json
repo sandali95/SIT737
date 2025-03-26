@@ -1,0 +1,21 @@
+{
+  "name": "sit737-2025-prac4p",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator.js",
+  "scripts": {
+    "start": "nodemon calculator.js",
+    "run": "node calculator.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "^4.21.2", 
+    "winston": "^3.17.0"
+  }
+}
