@@ -34,7 +34,9 @@ GET /multipication?n1=6&n2=7
 
 #### 04.Division
 
+```
 GET /division?n1=20&n2=5
+```
 
 ### Example Response
 
@@ -64,6 +66,7 @@ logs/combined.log - Contains all log messages
 In development mode, logs also appear in the console.
 
 #### File Structure
+
 calculator-api/<br>
 |--- calculator.js               # Main application file <br>
 |--- logs/                # Logs directory (auto-created)<br>
