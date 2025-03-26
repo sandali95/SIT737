@@ -5,10 +5,11 @@ A simple REST API for basic arithmetic operations built with Express.js and Wins
 ## Features
 
 - Four basic arithmetic operations: add, subtract, multiply, divide
-- support for advanced arithmetic operations such as exponentiation, square root, and modulo operations
+- Advanced Operations: Exponentiation, Square Root, Modulo, Factorial
 - Comprehensive request logging
 - Error handling and validation
 - JSON responses
+- health Check endpoint for system monitoring
 
 ## Guide on calculator.js
 
@@ -30,13 +31,45 @@ GET /substract?n1=10&n2=4
 #### 03.Multiplication
 
 ```
-GET /multipication?n1=6&n2=7
+GET /multiply?n1=6&n2=7
 ```
 
 #### 04.Division
 
 ```
-GET /division?n1=20&n2=5
+GET /divide?n1=20&n2=5
+```
+
+#### 05. Exponentiation
+
+```
+GET /power?base=2&exponent=3
+```
+
+#### 06. Square Root
+
+```
+GET /sqrt?number=25
+```
+
+#### 07. Modulo
+
+```
+GET /modulo?dividend=10&divisor=3
+```
+
+#### 08. Factorial
+
+```
+GET /factorial?number=5
+```
+
+### System Operations
+
+#### 09. Health Check
+
+```
+GET /health
 ```
 
 ### Example Response
@@ -44,16 +77,33 @@ GET /division?n1=20&n2=5
 Success
 ```
 {
-  "statuscocde": 200,
-  "data": 8
+  "operation": "add",
+  "input": {
+    "n1": 5,
+    "n2": 3
+  },
+  "result": 8,
+  "timestamp": "2023-11-20T14:30:45.123Z"
 }
 ```
 
 Error
 ```
 {
-  "statuscocde": 500,
-  "msg": "Error: n1 incorrectly defined"
+  "statusCode": 400,
+  "error": "n1 must be a valid number",
+  "timestamp": "2023-11-20T14:31:22.456Z",
+  "path": "/add"
+}
+```
+
+```
+
+404 error
+{
+    "statusCode": 404,
+    "error": "Endpoint not found",
+    "timestamp": "2025-03-26T12:41:22.108Z"
 }
 ```
 

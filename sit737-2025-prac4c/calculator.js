@@ -95,11 +95,13 @@ const validateInputs = (input1, input2) => {
 
 // Error handling middleware
 const errorHandler = (err, req, res, next) => {
-  logger.error(err.message);
+  logger.error(`${err.message} - ${req.originalUrl} - ${req.method} }`);
+
   res.status(500).json({ 
     statusCode: 500,
     error: err.message,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
+    path: req.path
   });
 };
 
