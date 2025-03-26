@@ -116,6 +116,34 @@ logs/combined.log - Contains all log messages
 
 In development mode, logs also appear in the console.
 
+### Error Handling 
+
+* Input validation is done through validateInput() method which returns the parsed float values for the input parameters.
+  It will throw a new Error which proper error message for any validation failures.
+
+* Error handling middleware errorHandler() catches and processes all errors in the API, logging them with key details while sending a clean, structured error response to clients. It ensures consistent error reporting with below format.
+
+```
+{
+  "statusCode": 500,
+  "error": "Division by zero",
+  "timestamp": "2023-11-21T09:45:22.123Z",
+  "path": "/divide"
+}
+```
+
+* All requests to undefined routes are catched by the middleware defined in line 240 and returns a clean JSON error response with a 404 status code. 
+```
+{
+  "statusCode": 404,
+  "error": "Endpoint not found",
+  "timestamp": "2023-11-22T08:30:45.000Z"
+}
+```
+
+
+
+
 #### File Structure
 
 calculator-api/<br>
