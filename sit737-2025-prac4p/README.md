@@ -11,7 +11,7 @@ A simple REST API for basic arithmetic operations built with Express.js and Wins
 
 ## Guide on calculator.js
 
-#### API Endpoints
+### API Endpoints
 All endpoints accept GET requests with query parameters n1 and n2.
 
 #### 01.Addition
@@ -36,7 +36,7 @@ GET /multipication?n1=6&n2=7
 
 GET /division?n1=20&n2=5
 
-#### Example Response
+### Example Response
 
 Success
 ```
@@ -54,7 +54,7 @@ Error
 }
 ```
 
-#### Logging
+### Logging
 The application logs to two files:
 
 logs/error.log - Contains only error messages
@@ -64,11 +64,11 @@ logs/combined.log - Contains all log messages
 In development mode, logs also appear in the console.
 
 #### File Structure
-calculator-api/
-|--- calculator.js               # Main application file
-|--- logs/                # Logs directory (auto-created)
-│   ├── error.log        
-│   └── combined.log     
-├── package.json
-└── node_modules/
+calculator-api/<br>
+|--- calculator.js               # Main application file <br>
+|--- logs/                # Logs directory (auto-created)<br>
+│   ├── error.log        <br>
+│   └── combined.log     <br>
+├── package.json<br>
+└── node_modules/<br>
 
