@@ -15,6 +15,10 @@ This is a simple todo application with only one service demonstrating docker and
 
     Access the web app in http://localhost:3000/home
 
+3. **Health check**
+    ```bash
+    docker ps
+
 ## Step by Step Guide
 
 ### docker file
