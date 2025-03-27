@@ -1,0 +1,21 @@
+version: '3'
+services:
+
+  todo-app:
+    image: todo-app
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: todo-app
+    ports:
+     - "3000:80"
+    environment:
+      - PORT=80
+    restart: unless-stopped  # Automatically restarts unless manually stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]  # Checks if /health endpoint returns HTTP 200
+      interval: 60s           # Check every 30 seconds
+      timeout: 10s            # Timeout after 10 seconds
+      retries: 3               # Retry 3 times before declaring failure
+      start_period: 10s        # Wait 10s before first check (app startup time)
+    
