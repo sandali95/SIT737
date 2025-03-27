@@ -108,11 +108,10 @@ Error
 ```
 
 ### Logging
-The application logs to two files:
+*The application logs to two files:
+  * logs/error.log - Contains only error messages
 
-logs/error.log - Contains only error messages
-
-logs/combined.log - Contains all log messages
+  * logs/combined.log - Contains all log messages
 
 In development mode, logs also appear in the console.
 
@@ -142,9 +141,7 @@ In development mode, logs also appear in the console.
 ```
 
 
-
-
-#### File Structure
+### File Structure
 
 calculator-api/<br>
 |--- calculator.js               # Main application file <br>
