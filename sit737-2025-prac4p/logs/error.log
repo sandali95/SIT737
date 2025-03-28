@@ -1,6 +1,0 @@
-{"level":"error","message":"Attempt to divide by zero","service":"calc-service"}
-{"level":"error","message":"Error: Cannot divide by zero","service":"calc-service"}
-{"level":"error","message":"n1 is incorrectly defined","service":"calc-service"}
-{"level":"error","message":"Error: n1 must be a valid number","service":"calc-service"}
-{"level":"error","message":"n1 is incorrectly defined","service":"calc-service"}
-{"level":"error","message":"Error: n1 must be a valid number","service":"calc-service"}
