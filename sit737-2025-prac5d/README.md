@@ -36,11 +36,13 @@ This is a continuation of 5.1P where we push the image to the artifact registry 
 
     ```bash
     gcloud auth configure-docker LOCATION-docker.pkg.dev
+    ```
 
     Push the image to Artifact Registry
     
     ```bash
     docker push LOCATION-docker.pkg.dev/PROJECT-ID/<repo-created>/<image-name>:<version>
+    ```
 
 4. **Run the image from GCP**
 
@@ -48,6 +50,7 @@ This is a continuation of 5.1P where we push the image to the artifact registry 
 
     ```bash
     docker run -p <host-port>:<container-port> -e PORT=<container-port> LOCATION-docker.pkg.dev/PROJECT-ID/<repo-created>/<image-name>:<version>
+    ```
 
     Access the web app in http://localhost:<host-port>/home     
 
