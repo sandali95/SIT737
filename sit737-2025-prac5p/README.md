@@ -13,7 +13,18 @@ This is a simple todo application with only one service demonstrating docker and
     ```bash
     docker compose up -d --build
 
-    Access the web app in http://localhost:3000/home
+    Docker compose will build and run the application according to the given instructions in the compose file. Similarly, you can build and run the application using following individual comamnds without using docker compose.
+
+    Naviage to the project where the docker file is.
+    Run,
+
+    ```bash
+    docker build -t <image-name> .  
+
+    ```bash
+    docker run -p <host-port>:<container-port> -e PORT=<container-port> <image>
+
+    Access the web app in http://localhost:<host-port>/home
 
 3. **Health check**
     ```bash
@@ -89,4 +100,4 @@ services:
       start_period: 10s # Initial delay before first health check
  ```     
 
-Create an .env file inorder to change the value for process.env.PORT. The default value for this will be 80.
+Change the value of PORT variable in the docker-compose file inorder to run it in another port. The default value for this will be 80.
