@@ -52,5 +52,5 @@ This is a continuation of 5.1P where we push the image to the artifact registry 
     docker run -p <host-port>:<container-port> -e PORT=<container-port> LOCATION-docker.pkg.dev/PROJECT-ID/<repo-created>/<image-name>:<version>
     ```
 
-    Access the web app in http://localhost:<host-port>/home     
+    Access the web app in http://localhost: host-port /home     
 
