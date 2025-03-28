@@ -13,8 +13,10 @@ This is a simple todo application with only one service demonstrating docker and
 2.  **Build and Run with Docker**
     ```bash
     docker compose up -d --build
+    ```
 
-    Docker compose will build and run the application according to the given instructions in the compose file. Similarly, you can build and run the application using following individual comamnds without using docker compose.
+    Docker compose will build and run the application according to the given instructions in the compose file. Similarly, you can build and run the application using following individual comamnds 
+    without using docker compose.
 
     Naviage to the project where the docker file is.
     Run,
