@@ -7,6 +7,7 @@ This is a simple todo application with only one service demonstrating docker and
 1. **Clone the repository**
    ```bash
    git clone https://github.com/your-repo/todo-app.git
+   ```
    cd todo-app
 
 2.  **Build and Run with Docker**
@@ -19,16 +20,19 @@ This is a simple todo application with only one service demonstrating docker and
     Run,
 
     ```bash
-    docker build -t <image-name> .  
+    docker build -t <image-name> .
+    ```
 
     ```bash
     docker run -p <host-port>:<container-port> -e PORT=<container-port> <image>
+    ```
 
     Access the web app in http://localhost:<host-port>/home
 
 3. **Health check**
     ```bash
     docker ps
+    ```
 
 ## Step by Step Guide
 
