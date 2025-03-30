@@ -184,7 +184,7 @@ app.get("/power", (req, res, next) => {
 
 app.get("/sqrt", (req, res, next) => {
   try {
-    const [number] = validateInputs(req.query.number);
+    const [number] = validateInputs(req.query.number,1);
     const result = squareRoot(number);
     logger.info(`Square root: √${number} = ${result}`);
     res.status(200).json({
@@ -214,7 +214,7 @@ app.get("/modulo", (req, res, next) => {
 
 app.get("/factorial", (req, res, next) => {
   try {
-    const [number] = validateInputs(req.query.number);
+    const [number] = validateInputs(req.query.number,1);
     const result = factorial(number);
     logger.info(`Factorial: ${number}! = ${result}`);
     res.status(200).json({
