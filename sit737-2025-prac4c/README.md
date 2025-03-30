@@ -21,48 +21,64 @@ All endpoints accept GET requests with query parameters n1 and n2.
 ```
 GET /add?n1=5&n2=3
 ```
+<img width="500" alt="Screenshot 2025-03-31 at 09 28 09" src="https://github.com/user-attachments/assets/c7dc6cc9-a971-4b3a-b454-171915c82892" />
+
 
 #### 02.Subtraction
 
 ```
 GET /substract?n1=10&n2=4
 ```
+<img width="500" alt="Screenshot 2025-03-31 at 09 32 36" src="https://github.com/user-attachments/assets/e5b7824d-dbbd-475a-9275-926fe9427620" />
+
 
 #### 03.Multiplication
 
 ```
 GET /multiply?n1=6&n2=7
 ```
+<img width="500" alt="Screenshot 2025-03-31 at 09 48 43" src="https://github.com/user-attachments/assets/e843aa0c-843d-4c59-b7d0-f011915fdfdf" />
+
 
 #### 04.Division
 
 ```
 GET /divide?n1=20&n2=5
 ```
+<img width="500" alt="Screenshot 2025-03-31 at 09 49 27" src="https://github.com/user-attachments/assets/3b2d3a60-83bd-48aa-8c9d-4c8b91ddd619" />
+
 
 #### 05. Exponentiation
 
 ```
 GET /power?base=2&exponent=3
 ```
+<img width="500" alt="Screenshot 2025-03-31 at 09 49 51" src="https://github.com/user-attachments/assets/ad436cbe-7e0f-48e2-9f9c-2fd25a699b7b" />
+
 
 #### 06. Square Root
 
 ```
 GET /sqrt?number=25
 ```
+<img width="500" alt="Screenshot 2025-03-31 at 09 53 15" src="https://github.com/user-attachments/assets/82cfdccd-9435-4457-b3c6-50f28238c583" />
+
 
 #### 07. Modulo
 
 ```
 GET /modulo?dividend=10&divisor=3
 ```
+<img width="500" alt="Screenshot 2025-03-31 at 09 53 35" src="https://github.com/user-attachments/assets/5411db3c-ad88-4d96-b368-32a186c8cba7" />
+
 
 #### 08. Factorial
 
 ```
 GET /factorial?number=5
 ```
+<img width="500" alt="Screenshot 2025-03-31 at 09 54 19" src="https://github.com/user-attachments/assets/2fda041d-80bc-4989-b484-242cf99d328c" />
+
 
 ### System Operations
 
@@ -71,6 +87,8 @@ GET /factorial?number=5
 ```
 GET /health
 ```
+<img width="500" alt="Screenshot 2025-03-31 at 09 57 18" src="https://github.com/user-attachments/assets/3be950d0-5c62-42fc-a4b7-f64562b54350" />
+
 
 ### Example Response
 
@@ -110,10 +128,17 @@ Error
 ### Logging
 *The application logs to two files:
   * logs/error.log - Contains only error messages
+    <img width="1358" alt="Screenshot 2025-03-31 at 09 57 55" src="https://github.com/user-attachments/assets/498b2387-f81e-413d-97d2-68f698aff38f" />
+
 
   * logs/combined.log - Contains all log messages
+    <img width="1369" alt="Screenshot 2025-03-31 at 09 58 03" src="https://github.com/user-attachments/assets/e71b1d9d-dcfd-45c1-bc20-562206eb1581" />
+
 
 In development mode, logs also appear in the console.
+
+<img width="500" alt="Screenshot 2025-03-31 at 09 58 21" src="https://github.com/user-attachments/assets/6fc6448f-a98b-46b8-a3ee-df4ef22a0e26" />
+
 
 ### Error Handling 
 
