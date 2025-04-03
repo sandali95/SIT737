@@ -6,9 +6,9 @@ This is a simple todo application with only one service demonstrating docker and
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-repo/todo-app.git
+   git clone https://github.com/sandali95/SIT737.git
    ```
-   cd todo-app
+   cd sit737-2025-prac5p
 
 2.  **Build and Run with Docker**
     ```bash
