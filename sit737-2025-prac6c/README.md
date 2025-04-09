@@ -1,19 +1,19 @@
 # 6.2C: Interacting with Kubernetes
 
 This is a simple todo application with only one service demonstrating kubernetes cluster usage.
-This is a continuation of 5.1p task. The image built from the task has been used in the deployment.
+This is a continuation of 6.1p task. The image built from the task has been used in the deployment with a minor version upgrade for the changes.
 
 ### Docker
 The `todo-app` is containerized using Docker. Below are the key details:
-- **Docker Image**: `sandali95/todo-app:1.1`
+- **Docker Image**: `sandali95/todo-app:1.2`
 - **Dockerfile**: A `Dockerfile` is used to build the image for the application.
 - **Build Command**:
   ```bash
-  docker build -t sandali95/todo-app:1.1 .
+  docker build -t sandali95/todo-app:1.2 .
   ```
 - **Push Command**:
   ```bash
-  docker push sandali95/todo-app:1.1
+  docker push sandali95/todo-app:1.2
   ```
 
 #### Instructions:
