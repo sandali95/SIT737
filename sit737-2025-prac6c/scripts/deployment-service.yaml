@@ -1,0 +1,40 @@
+# Deployment configuration for the todo-app
+apiVersion: apps/v1 # Specifies the API version for the Deployment resource
+kind: Deployment # Defines the resource type as Deployment
+metadata:
+  name: todo-app # Name of the Deployment
+spec:
+  replicas: 1 # Number of pod replicas to maintain
+  selector:
+    matchLabels:
+      app: todo-app # Label selector to identify the pods managed by this Deployment
+  template: # Template for the pods created by this Deployment
+    metadata:
+      labels:
+        app: todo-app # Labels applied to the pods created by this Deployment
+    spec:
+      containers:
+        - name: todo-app # Name of the container
+          image: 'sandali95/todo-app:1.2' # Docker image for the container - 1.2 version
+          ports:
+            - containerPort: 3040 # Port exposed by the container
+          env: # Environment variables for the container
+            - name: PORT # Name of the environment variable
+              value: "3040" # Value of the PORT environment variable
+
+---
+# Service configuration to expose the todo-app
+apiVersion: v1 # Specifies the API version for the Service resource
+kind: Service # Defines the resource type as Service
+metadata:
+  name: todo-app-service # Name of the Service
+spec:
+  selector:
+    app: todo-app # Label selector to identify the pods targeted by this Service
+  type: ClusterIP # only accessible from within the cluster
+  # type: NodePort # Uncomment this line to expose the Service on a static port on each Node's IP
+  ports:
+    - protocol: TCP
+      port: 80     # Cluster-internal port (used for port-forwarding)
+      targetPort: 3040  # Must match the containerPort
+
