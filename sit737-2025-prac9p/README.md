@@ -33,8 +33,8 @@ The `todo-app` is exposed using a Kubernetes Service resource. Below are the key
 - **Kind**: `Service`
 - **Name**: `todo-app-service`
 - **Type**: `ClusterIP`
-- **Port**: `80`
-- **Target Port**: `3040`
+- **Port**: `3001`
+- **Target Port**: `3001`
 
 ### MongoDB Deployment Configuration
 A MongoDB instance is deployed to provide a persistent database for the `todo-app`. Below are the key details:
