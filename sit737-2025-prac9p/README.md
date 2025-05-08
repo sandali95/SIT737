@@ -82,6 +82,7 @@ The MongoDB instance is exposed using a Kubernetes Service resource. Below are t
 #### Prerequisites
 1. Create a GKE cluster in your GCP project. Follow the official guide: [Create a GKE Cluster](https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster#create_cluster).
 2. Ensure that `kubectl` and `gcloud` CLI tools are installed and configured on your local machine.
+3. Setup GCP CLI with gke-gcloud-auth-plugin 
 
 #### Steps to Deploy
 
@@ -141,7 +142,7 @@ The MongoDB instance is exposed using a Kubernetes Service resource. Below are t
    curl http://<external-ip>:3001/health
    ```
 
-7. ***Clean up**
+7. **Clean up**
    To tear down
    ```
    kubectl delete namespace todo-app
