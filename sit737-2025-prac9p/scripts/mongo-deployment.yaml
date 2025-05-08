@@ -1,4 +1,3 @@
-# k8s/mongo-standalone-gke.yaml
 ---
 apiVersion: v1
 kind: Namespace
