@@ -117,7 +117,7 @@ The MongoDB instance is exposed using a Kubernetes Service resource. Below are t
 4. **Deploy the Todo Application**  
    Apply the `todo-app` deployment and service configuration:
    ```bash
-   kubectl apply -f scripts/deployment-service.yaml
+   kubectl apply -f scripts/todo-deployment.yaml
    ```
    Wait for the deployment to complete:
    ```bash
