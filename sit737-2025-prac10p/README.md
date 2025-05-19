@@ -5,10 +5,7 @@ This is a simple todo application with only one service demonstrating GCP Kubern
 
 ### How to Apply the Configuration and Deploy into GKE
 
-#### Prerequisites
-1. Create a GKE cluster in your GCP project. Follow the official guide: [Create a GKE Cluster](https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster#create_cluster).
-2. Ensure that `kubectl` and `gcloud` CLI tools are installed and configured on your local machine.
-3. Setup GCP CLI with gke-gcloud-auth-plugin 
+Please refer task9p content.
 
 #### Deployment
 
@@ -107,10 +104,10 @@ Google Kubernetes Engine (GKE) provides integrated monitoring and logging to hel
   gcloud container clusters update <CLUSTER_NAME> \
     --monitoring=SYSTEM,WORKLOAD
   ```
-- *
 - **Configure Metrics**: Use Google Cloud Metrics Explorer to monitor the following metrics for your Kubernetes cluster:
   - `kubernetes.io/container/cpu/usage_time`
   - `kubernetes.io/container/memory/used_bytes`
+
 Apply filters such as:
 
   - resource.type=`k8s_container`
@@ -128,11 +125,9 @@ These metrics can help troubleshoot issues with your GKE clusters and workloads.
   kubectl logs <pod-name> -n <namespace>
   ```
 - **Configure Logs**: Use Google Cloud Logs Explorer to view logs for your Kubernetes pods. Apply filters such as:
-  ```
-  resource.type="k8s_container"
-  resource.labels.cluster_name="sit737-cluster"
-  labels.app="simple-web-monitoring-app"
-  ```
+  - resource.type=`k8s_container`
+  - resource.labels.cluster_name=`todo-cluster`
+  - labels.app=`todo-app`
 
 #### Alerts
 
